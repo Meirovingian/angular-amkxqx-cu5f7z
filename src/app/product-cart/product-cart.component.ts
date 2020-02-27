@@ -14,7 +14,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductCartComponent implements OnInit {
 
-  itemSet = new Set<number>();
+  itemSet = new Set<unknown>();
   checkoutForm;
 
   constructor(
