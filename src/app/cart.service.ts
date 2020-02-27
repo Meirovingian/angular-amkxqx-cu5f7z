@@ -38,9 +38,9 @@ export class CartService {
     return 0;
   }
 
-  getFuncIdSet(){
+  getFuncIdSet(): Set<number>{
     console.log('Start of CartService getFuncIdSet()');
-    let funcIdSet = new Set();
+    let funcIdSet = new Set<number>();
     if(this.map !== null && this.map.size > 0){
       console.log('Map has ' + this.map.size + ' elements !');
       this.map.forEach((value: number, key: number) => {
@@ -57,7 +57,7 @@ export class CartService {
     this.map.clear();
   }
 
-  removeProductFromCart(funcId){
+  removeProductFromCart(funcId): Set<number>{
     if(this.map == null){
       this.map = new Map();
     }
